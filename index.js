@@ -25,7 +25,7 @@ app.get("/api/books", (req, res) => {
 //   console.log(req.params);
 // });
 
-app.get("/api/:booksID", async (req, res) => {
+app.get("/api/:booksID", cors (), async (req, res) => {
   // can do a for loop to access your array at position 3
   let requestedBook = req.params.bookID;
   console.log(requestedBook);
