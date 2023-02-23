@@ -20,6 +20,10 @@ app.get("/api/books", (req, res) => {
   res.json(books);
 });
 
+app.get("/api/books/:booksISBN", async (req, res) => { // this get request lets you look for a specific book ID
+    console.log(req.params)
+  });
+
 app.use(cors());
 
 const PORT = 4000;
