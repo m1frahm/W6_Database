@@ -12,6 +12,10 @@ app.get("/api/books", (req, res) => {
   res.json(books);
 });
 
+app.get("/", (req, res) => {
+  res.json("Checking to see if message will print on screen");
+});
+
 app.use(cors());
 
 const PORT = 4000;
