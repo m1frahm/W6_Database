@@ -25,7 +25,7 @@ app.get("/api/books", (req, res) => {
 //   console.log(req.params);
 // });
 
-app.get("/api/:booksID", cors (), async (req, res) => {
+app.get("/api/:booksID", cors(), async (req, res) => {
   // can do a for loop to access your array at position 3
   let requestedBook = req.params.bookID;
   console.log(requestedBook);
@@ -35,6 +35,24 @@ app.get("/api/:booksID", cors (), async (req, res) => {
 });
 
 app.use(cors());
+
+//copied post request from postman
+// var myHeaders = new Headers();
+// myHeaders.append("api-key", "<API Key>");
+
+// // var raw = '{\n  "title": "The Four Agreements",\n  "author": "don Miguel Ruiz",\n  "genre": "self-help",\n  "yearPublished": 1997\n}';
+
+// var requestOptions = {
+//   method: "POST",
+//   headers: myHeaders,
+//   body: '{\n  "title": "The Four Agreements",\n  "author": "don Miguel Ruiz",\n  "genre": "self-help",\n  "yearPublished": 1997\n}',
+//   redirect: "follow",
+// };
+
+// fetch("https://library-api.postmanlabs.com/books", requestOptions)
+//   .then((response) => response.text())
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log("error", error));
 
 const PORT = 4000;
 
