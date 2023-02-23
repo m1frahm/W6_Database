@@ -20,11 +20,22 @@ app.get("/api/books", (req, res) => {
   res.json(books);
 });
 
-app.get("/api/books/:booksISBN", async (req, res) => { // this get request lets you look for a specific book ID
-    console.log(req.params)
-  });
+// app.get("/api/books/:booksID", async (req, res) => {
+//   // this get request lets you look for a specific book ID
+//   console.log(req.params);
+// });
+
+app.get("/api/:booksID", async (req, res) => {
+  // can do a for loop to access your array at position 3
+  let requestedBook = req.params.bookID;
+  console.log(requestedBook);
+  for (let i = 0; i < books.length; i++) {
+    console.log(books[3]);
+  }
+});
 
 app.use(cors());
 
 const PORT = 4000;
+
 app.listen(PORT, () => console.log(`Server for W6 Project ${PORT}`));
