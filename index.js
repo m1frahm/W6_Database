@@ -9,6 +9,7 @@ app.get("/api/books", (req, res) => {
     author: "Sarah J. Mass",
     format: "Kindle",
   };
+  res.json(books);
 });
 
 app.use(cors());
