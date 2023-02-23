@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const books = require('./books.js')
+const books = require("./books.js");
 const app = express();
 
 app.get("/api/books", (req, res) => {
@@ -14,6 +14,10 @@ app.get("/api/books", (req, res) => {
 
 app.get("/", (req, res) => {
   res.json("Checking to see if message will print on screen");
+});
+
+app.get("/api/books", (req, res) => {
+  res.json(books);
 });
 
 app.use(cors());
