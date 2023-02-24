@@ -13,6 +13,7 @@ const books = [
 
 //all routes in here are starting with /books
 router.get("/", (req, res) => {
+  console.log(books);
   res.send("Hello");
 });
 
