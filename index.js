@@ -1,12 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
-import booksRoutes from './routes/books.js';
+import booksRoutes from "./routes/books.js";
 const app = express();
 const PORT = 5000;
 
 app.use(bodyParser.json());
 
-app.use('/books', booksRoutes);
+app.use("/books", booksRoutes);
 
 app.listen(PORT, () =>
   console.log(`Server Running on port: http://localhost:${PORT}`)
@@ -14,6 +14,8 @@ app.listen(PORT, () =>
 
 app.get("/", (req, res) => res.send("Hello from Homepage."));
 
+//THE CODE BLOCK BELOW CAN BE IGNORED - IT IS HOW I INITIALLY STARTED MY PROJECT
+//Currently on this tutorial https://www.youtube.com/watch?v=l8WPWK9mS5M and stuck on 20:41
 // const express = require("express");
 // const cors = require("cors");
 // //const books = require("./books.js"); uncomment this
